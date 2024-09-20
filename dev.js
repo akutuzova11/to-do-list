@@ -63,5 +63,8 @@
 
 const onFormSubmit = (event) => {
   event.preventDefault();
-  
+
+  const newItemInput = document.querySelector(".js-newItem");
+  const newItemContent = newItemInput.value.trim();
+
       }}
