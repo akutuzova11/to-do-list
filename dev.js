@@ -57,4 +57,11 @@
         }
         
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents();
+};
+
+const onFormSubmit = (event) => {
+  event.preventDefault();
+  
       }}
