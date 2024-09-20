@@ -4,7 +4,7 @@ This web application is your ideal solution for managing tasks effortlessly.
 
 Easily add, remove, and toggle the completion status of tasks with a user-friendly interface to keep your to-do list organized and stay productive!
 
-![](https://github.com/akutuzova11/to-do-list/blob/main/images/gif%20for%20readme.mp4)
+![](https://github.com/akutuzova11/to-do-list/blob/main/images/gif%20for%20readme%202.gif)
 
 ## Built with
 
