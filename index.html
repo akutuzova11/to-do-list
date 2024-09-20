@@ -20,10 +20,23 @@
 </head>
 
 <body>
+
     <body class="todoContainer">
         <header>
             <h1 class="todoTitle">Lista zadań</h1>
         </header>
-</body>
+        <section class="todoSection">
+            <header class="todoSection__header">
+                <h2 class="todoSection__title">Dodaj nowe zadanie</h2>
+            </header>
+            <div class="todoSection__container">
+                <form class="todoForm js-form">
+                    <input class="todoForm__newItem js-newItem" type="text" placeholder="Co jest do zrobienia?"
+                        autofocus>
+                    <button class="todoForm__button">Dodaj zadanie</button>
+                </form>
+            </div>
+        </section>
+    </body>
 
 </html>
