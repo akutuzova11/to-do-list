@@ -1,0 +1,12 @@
+.todoForm {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .todoForm {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
