@@ -18,3 +18,11 @@
     border: none;
     transition: 0.5s;
 }
+
+.todoForm__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.todoForm__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
