@@ -38,3 +38,15 @@
 .todoTasks__button:active {
     background-color: hsl(120, 100%, 35%);
 }
+
+.todoTasks__button--deleted {
+    background-color: rgb(250, 48, 48)
+}
+
+.todoTasks__button--deleted:hover {
+    background-color: hsl(0, 100%, 65%);
+}
+
+.todoTasks__button--deleted:active {
+    background-color: hsl(0, 100%, 75%);
+}
