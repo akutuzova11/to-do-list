@@ -16,3 +16,25 @@
 .todoTasks__item--toggleCompleted span {
     text-decoration: line-through;
 }
+
+.todoTasks__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0;
+    transition: background 0.4s;
+}
+
+.todoTasks__button:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.todoTasks__button:active {
+    background-color: hsl(120, 100%, 35%);
+}
