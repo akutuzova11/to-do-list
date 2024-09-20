@@ -10,3 +10,11 @@
         gap: 10px;
     }
 }
+
+.todoForm__button {
+    padding: 10px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    transition: 0.5s;
+}
