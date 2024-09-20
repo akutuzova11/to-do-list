@@ -15,6 +15,33 @@
         });
         render();
       }
+
+      const removeTask = (taskIndex) => {tasks.splice(taskIndex, 1);
+        render();
+        };
+        
+        const toggleTaskCompleted = (taskIndex) => {
+          tasks[taskIndex].completed =!tasks[taskIndex].completed;
+          render();
+        };
+        
+        const bindEvents = () => {
+          const removeButtons = document.querySelectorAll(".js-remove");
+        removeButtons.forEach((removeButton,index) => {
+          removeButton.addEventListener("click", () => {
+        removeTask(index);
+          });
+        });
+        
+        const toggleCompletedButtons = document.querySelectorAll(".js-toggleCompleted");
+        toggleCompletedButtons.forEach((toggleCompletedButton, index) => {
+          toggleCompletedButton.addEventListener("click", () => {
+            toggleTaskCompleted(index);
+            
+          });
+        });
+        };
+
       const render = () => {
         let htmlString = "";
         for(const task of tasks) {
@@ -30,4 +57,4 @@
         }
         
         document.querySelector(".js-tasks").innerHTML = htmlString;
-        
+      }}
