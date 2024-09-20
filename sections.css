@@ -1,0 +1,15 @@
+.todoSection {
+    background-color: #FFFFFF;
+    margin: 10px 0;
+    box-shadow: 0 0 5px #afafaf;
+}
+
+.todoSection__header {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
