@@ -26,3 +26,19 @@
 .todoForm__button:active {
     background-color: hsl(180, 100%, 35%);
 }
+
+.todoForm__newItem {
+    border: 2px solid #ddd;
+    padding: 10px;
+}
+
+.todoForm__newItem:focus {
+    outline: 2px solid black;
+    border-radius: 2px;
+}
+
+@media (max-width: 767px) {
+    .todoForm__newItem {
+        min-width: 50%;
+    }
+}
