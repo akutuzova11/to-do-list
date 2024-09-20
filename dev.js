@@ -67,4 +67,23 @@ const onFormSubmit = (event) => {
   const newItemInput = document.querySelector(".js-newItem");
   const newItemContent = newItemInput.value.trim();
 
-      }}
+  if (newItemContent === "") {
+    newItemInput.focus(); 
+      return;
+  }
+
+  addNewItem(newItemContent);
+  newItemInput.value = "";
+  newItemInput.focus(); 
+};
+
+const init = ()=>{
+render();
+
+const form = document.querySelector(".js-form");
+form.addEventListener("submit", onFormSubmit
+)};
+
+init();
+
+}
