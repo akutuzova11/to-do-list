@@ -13,6 +13,10 @@
     gap: 10px;
 }
 
+.todoTasks__items--hidden{
+    display: none;
+}
+
 .todoTasks__item--toggleCompleted span {
     text-decoration: line-through;
 }
