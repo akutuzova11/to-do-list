@@ -12,12 +12,16 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasks = tasks.filter((task,i) => i !== taskIndex)
+        tasks = tasks.filter((task,i) => 
+            i !== taskIndex)
         render();
     };
 
     const toggleTaskCompleted = (taskIndex) => {
-        tasks = tasks.map((task,i) => i === taskIndex ? {...task, completed: taskCompleted} : task);
+        tasks = tasks.map((task,i) => 
+            i === taskIndex ? {
+                ...task, 
+                completed: !task.completed} : task);
         render();
     };
 
@@ -47,17 +51,57 @@
         });
     };
 
-    const render = () => {
-        let htmlForTasksList = (task) => `
+    const renderTask = () => {
+        const htmlForTasksList = (task) => `
             <li class="todoTasks__item ${task.completed && hideCompletedTask ? "todoTasks__items--hidden" : ""} js-tasks">
                 <button class="js-toggleCompleted todoTasks__button">${task.completed ? "✔" : ""}</button>
                 <span class="${task.completed ? "todoTasks__item--toggleCompleted" : ""}">${task.content}</span>
                 <button class="js-remove todoTasks__button todoTasks__button--deleted">🗑</button>
             </li>
             `;
-        }
+
         const taskListElement = document.querySelector(".js-tasks");
         taskListElement.innerHTML = tasks.map(htmlForTasksList).join("");
+    };
+
+    const renderButtons = () => {
+        const buttonsElement = document.querySelector(".js-buttons");
+
+        if(!tasks.length) {
+            buttonsElement.innerHTML = "";
+            return;
+        }
+
+        buttonsElement.innerHTML = `
+        <button class="todoSection__buttons js-toggleHideCompleted">${hideCompletedTask ? "Pokaż" : "Ukryj"} ukończone </button>
+
+        <button class="todoSection__buttons js-tickAllTasksCompleted" ${tasks.every(({completed}) => completed) ? "disabled" : ""}>
+        Ukończ wszystkie
+        </button>
+        `;
+    };
+
+    const bindButtonsEvents = () => {
+        const tickAllTasksCompletedButton = document.querySelector(".js-tickAllTasksCompleted");
+
+        if (tickAllTasksCompletedButton){
+            tickAllTasksCompletedButton.addEventListener("click", tickAllTasksCompleted);
+        }
+
+        const hideAllCompletedTasksButton = document.querySelector(".js-toggleHideCompleted");
+
+        if (hideAllCompletedTasksButton){
+            hideAllCompletedTasksButton.addEventListener("click", hideAllCompletedTasks);
+    
+        }
+    };
+
+    const render = () => {
+        renderTask();
+        renderButtons();
+
+        bindEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
