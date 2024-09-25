@@ -48,18 +48,16 @@
     };
 
     const render = () => {
-        let htmlString = "";
-        for (const task of tasks) {
-            htmlString += `
-            <li class="todoTasks__item ${task.completed ? "todoTasks__item--toggleCompleted" : ""}">
+        let htmlForTasksList = (task) => `
+            <li class="todoTasks__item ${task.completed && hideCompletedTask ? "todoTasks__items--hidden" : ""} js-tasks">
                 <button class="js-toggleCompleted todoTasks__button">${task.completed ? "✔" : ""}</button>
                 <span class="${task.completed ? "todoTasks__item--toggleCompleted" : ""}">${task.content}</span>
                 <button class="js-remove todoTasks__button todoTasks__button--deleted">🗑</button>
             </li>
             `;
         }
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-        bindEvents();
+        const taskListElement = document.querySelector(".js-tasks");
+        taskListElement.innerHTML = tasks.map(htmlForTasksList).join("");
     };
 
     const onFormSubmit = (event) => {
