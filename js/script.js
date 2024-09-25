@@ -21,6 +21,13 @@
         render();
     };
 
+    const tickAllTasksCompleted = () => {
+        tasks = tasks.map((task)=> ({...task, completed: true}));
+        render();
+    }
+
+    
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
         removeButtons.forEach((removeButton, index) => {
