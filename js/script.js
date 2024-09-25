@@ -1,21 +1,23 @@
 {
-    const tasks = [
+    let hideCompletedTask = false;
+    
+    let tasks = [
         { content: "spacer w parku", completed: false },
         { content: "yoga o 19:30", completed: true },
     ];
 
     const addNewItem = (newItemContent) => {
-        tasks.push({ content: newItemContent });
+        tasks = [...tasks, { content: newItemContent }];
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = tasks.filter((task,i) => i !== taskIndex)
         render();
     };
 
     const toggleTaskCompleted = (taskIndex) => {
-        tasks[taskIndex].completed = !tasks[taskIndex].completed;
+        tasks = tasks.map((task,i) => i === taskIndex ? {...task, completed: taskCompleted} : task);
         render();
     };
 
