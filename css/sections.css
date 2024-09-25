@@ -39,3 +39,34 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.todoSection__buttons{
+    background-color: transparent;
+    border: none;
+    color: teal;
+    margin-left: 10px;
+
+}
+
+@media (max-width: 767px) {
+    .todoSection__buttons {
+        margin: 10px;
+        flex-basis: 100%;
+    }
+}
+
+.todoSection__buttons:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.todoSection__buttons:active {
+    color: hsl(180, 100%, 40%);
+}
+
+.todoSection__buttons--hidden{
+    visibility: hidden;
+}
+
+.todoSection__buttons:disabled{
+    color: #ddd;
+}
