@@ -26,7 +26,10 @@
         render();
     }
 
-    
+    const hideAllCompletedTasks = () => {
+        hideCompletedTask = !hideCompletedTask;
+        render();
+    }
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
