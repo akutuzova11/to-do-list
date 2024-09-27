@@ -45,7 +45,6 @@
     border: none;
     color: teal;
     margin-left: 10px;
-
 }
 
 @media (max-width: 767px) {
@@ -68,5 +67,5 @@
 }
 
 .todoSection__buttons:disabled{
-    color: #ddd;
+    color: #bfbfbf;
 }
