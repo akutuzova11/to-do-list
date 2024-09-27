@@ -53,11 +53,11 @@
 
     const renderTask = () => {
         const htmlForTasksList = (task) => `
-            <li class="todoTasks__item ${task.completed && hideCompletedTask ? "todoTasks__items--hidden" : ""} js-tasks">
-                <button class="js-toggleCompleted todoTasks__button">${task.completed ? "✔" : ""}</button>
-                <span class="${task.completed ? "todoTasks__item--toggleCompleted" : ""}">${task.content}</span>
-                <button class="js-remove todoTasks__button todoTasks__button--deleted">🗑</button>
-            </li>
+                <li class="todoTasks__item ${task.completed && hideCompletedTask ? "todoTasks__items--hidden" : ""} js-tasks">
+                    <button class="js-toggleCompleted todoTasks__button">${task.completed ? "✔" : ""}</button>
+                    <span class="${task.completed ? "todoTasks__item--toggleCompleted" : ""}">${task.content}</span>
+                    <button class="js-remove todoTasks__button todoTasks__button--deleted">🗑</button>
+                </li>
             `;
 
         const taskListElement = document.querySelector(".js-tasks");
@@ -76,7 +76,7 @@
         <button class="todoSection__buttons js-toggleHideCompleted">${hideCompletedTask ? "Pokaż" : "Ukryj"} ukończone </button>
 
         <button class="todoSection__buttons js-tickAllTasksCompleted" ${tasks.every(({completed}) => completed) ? "disabled" : ""}>
-        Ukończ wszystkie
+            Ukończ wszystkie
         </button>
         `;
     };
