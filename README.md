@@ -6,6 +6,10 @@ Easily add, remove, and toggle the completion status of tasks with a user-friend
 
 ![](https://github.com/akutuzova11/to-do-list/blob/main/images/gif%20for%20readme.gif)
 
+## Demo
+
+https://akutuzova11.github.io/to-do-list/
+
 ## Built with
 
   - HTML
@@ -22,10 +26,6 @@ Easily add, remove, and toggle the completion status of tasks with a user-friend
 5. Click the **checkmark button** to toggle the task's completion status or the **trash can icon** to delete it.
 6. Click the **"Ukończ wszystkie"** button to mark all tasks as completed.
 7. Use the **"Ukryj ukończone"** button to hide or show completed tasks.
-
-## Demo
-
-https://akutuzova11.github.io/to-do-list/
 
 ## Contributing
 
