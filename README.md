@@ -8,7 +8,7 @@ Easily add, remove, and toggle the completion status of tasks with a user-friend
 
 ## Demo
 
-https://akutuzova11.github.io/to-do-list/
+https://akutuzova11.github.io/js-to-do-list/
 
 ## Built with
 
